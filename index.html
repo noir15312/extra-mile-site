@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EXTRA MILE | Gold & Diamond Commodity Trading</title>
+
+<meta name="description" content="International gold and diamond commodity trading company connecting Africa and global markets through secure and compliant operations.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="EXTRA MILE GOLD AND DIAMOND COMMODITY LTD">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0b1423;
+    --accent:#b89c5a;
+    --text:#f1f1f1;
+    --muted:#b0b6c0;
+    --glass:rgba(255,255,255,0.06);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--primary);
+    color:var(--text);
+    line-height:1.9;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(11,20,35,0.85);
+    backdrop-filter:blur(16px);
+    padding:26px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    color:#fff;
+    text-decoration:none;
+}
+nav ul{display:flex;list-style:none}
+nav li{margin-left:48px}
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+nav a:hover{color:var(--accent)}
+.lang-switch button{
+    background:none;border:none;
+    color:var(--muted);
+    font-size:12px;
+    letter-spacing:2px;
+    cursor:pointer;
+}
+.lang-switch button:hover{color:var(--accent)}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 12%;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(184,156,90,.18), transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(255,255,255,.06), transparent 40%);
+}
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:52px;
+    letter-spacing:3px;
+    margin-bottom:22px;
+}
+.hero p{
+    color:var(--accent);
+    font-size:14px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+/* SECTIONS */
+.section{
+    max-width:1600px;
+    margin:auto;
+    padding:140px 8%;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:100px;
+}
+.tag{
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:16px;
+    display:block;
+}
+h2{
+    font-family:'Playfair Display',serif;
+    font-size:38px;
+    margin-bottom:34px;
+}
+p{
+    font-size:18px;
+    color:var(--muted);
+    margin-bottom:26px;
+    text-align:justify;
+}
+
+/* GLASS CARD */
+.glass{
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    padding:64px;
+    border-radius:10px;
+}
+
+/* INFO */
+.info-line{
+    display:flex;
+    gap:44px;
+    margin:46px 0;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#fff;
+}
+
+/* CTA */
+.cta{
+    display:inline-block;
+    margin-top:40px;
+    padding:18px 46px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    text-decoration:none;
+    letter-spacing:2px;
+    font-size:12px;
+}
+.cta:hover{background:var(--accent);color:#000}
+
+/* IMAGE STACK (SOLUÇÃO DEFINITIVA) */
+.image-stack{
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+}
+
+.image-stack img{
+    display:block;              /* FIX 1 */
+    width:100%;
+    height:180px;               /* FIX 2 — altura REAL */
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+    filter:brightness(.9);
+    transition:transform .6s ease, filter .6s ease;
+}
+.image-stack img:hover{
+    transform:scale(1.04);
+    filter:brightness(1);
+}
+
+/* CAREERS */
+.careers{
+    max-width:1600px;
+    margin:auto;
+    padding:140px 8%;
+}
+.careers-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:44px;
+    margin-top:70px;
+}
+.career-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    min-height:320px;
+    display:flex;
+    align-items:flex-end;
+}
+.career-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.7);
+    transition:transform 1s ease, filter 1s ease;
+}
+.career-card:hover img{
+    transform:scale(1.08);
+    filter:brightness(.9);
+}
+.career-overlay{
+    position:relative;
+    width:100%;
+    padding:34px;
+    background:linear-gradient(to top,rgba(0,0,0,.75),transparent);
+}
+.career-overlay h3{
+    font-family:'Playfair Display',serif;
+    color:#fff;
+    font-size:24px;
+    letter-spacing:1px;
+}
+
+/* FOOTER */
+footer{
+    padding:140px 10% 50px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:70px;
+}
+footer h4{
+    color:#fff;
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:26px;
+}
+footer p{
+    font-size:15px;
+    color:var(--muted);
+}
+.bottom{
+    text-align:center;
+    margin-top:80px;
+    font-size:12px;
+    color:var(--muted);
+}
+
+/* ANIMATION */
+.reveal{opacity:0;transform:translateY(35px);transition:1.2s ease}
+.reveal.active{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+    .section{grid-template-columns:1fr;padding:100px 8%}
+}
+.lang-en{display:none}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="#" class="logo">EXTRA MILE</a>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#operations">Operations</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="lang-switch">
+        <button onclick="setLang('pt')">PT</button> |
+        <button onclick="setLang('en')">EN</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="reveal">
+        <h1>Gold & Diamond Commodity Trading</h1>
+        <p>Connecting Global Markets</p>
+    </div>
+</section>
+
+<section id="operations" class="section reveal">
+    <div class="glass">
+        <div class="lang-pt">
+            <span class="tag">International Presence</span>
+            <h2>Operações em África e Angola</h2>
+            <div class="info-line"><span>Gold</span><span>Diamonds</span><span>Global Trade</span></div>
+            <p><p>
+Fundada recentemente, a <strong>EXTRA MILE GOLD AND DIAMOND COMMODITY LTD</strong> nasce com uma proposta sólida e bem definida: conectar o setor mineral aos principais mercados internacionais com eficiência, segurança e inteligência comercial.
+</p>
+
+<p>
+Embora jovem como empresa, é formada por profissionais com ampla trajetória e profundo conhecimento nos mercados globais de minérios e metais preciosos.
+</p>
+
+<p>
+Especializada em comércio exterior no setor mineral, a EXTRA MILE atua como parceira estratégica de pequenas, médias e grandes empresas, oferecendo soluções completas que vão desde a estruturação comercial e cotações internacionais até planejamento tributário, beneficiamento, logística e transporte.
+</p>
+
+<p>
+Nosso foco é gerar operações competitivas, reduzir riscos e custos, além de garantir agilidade e transparência em cada etapa das transações.
+</p>
+
+<p>
+A experiência acumulada de nossa equipe nos permite compreender as dinâmicas dos principais polos consumidores de metais e minerais, facilitando o acesso ao mercado internacional e contribuindo para a sustentabilidade financeira e a liquidez das negociações de nossos clientes.
+</p>
+
+<p>
+Inserida em um cenário no qual o Brasil se destaca como um dos grandes fornecedores globais de matérias-primas, a mineração exerce papel fundamental na balança comercial e apresenta expressivo potencial de crescimento.
+</p>
+
+<p>
+A EXTRA MILE posiciona-se como um elo estratégico nesse contexto, apoiando o desenvolvimento econômico e a expansão de negócios em mercados em constante evolução.
+</p>
+
+<p>
+Com atuação internacional e foco inicial em ouro e diamantes, a empresa segue ampliando seu portfólio e oportunidades, sempre com o compromisso de impulsionar resultados, fortalecer o fluxo de caixa dos parceiros e garantir operações seguras, eficientes e alinhadas às melhores práticas do mercado global.
+</p>
+
+            <a href="#contact" class="cta">Contactar Equipa</a>
+        </div>
+        <div class="lang-en">
+            <span class="tag">International Presence</span>
+            <h2>Operations in Africa and Angola</h2>
+            <div class="info-line"><span>Gold</span><span>Diamonds</span><span>Global Trade</span></div>
+            <p>
+Recently founded, <strong>EXTRA MILE GOLD AND DIAMOND COMMODITY LTD</strong> was established with a solid and well-defined purpose: to connect the mineral sector to major international markets through efficiency, security, and commercial intelligence.
+</p>
+
+<p>
+Although young as a company, EXTRA MILE is built by professionals with extensive experience and deep expertise in global mineral and precious metals markets.
+</p>
+
+<p>
+Specialized in international trade within the mining sector, EXTRA MILE acts as a strategic partner to small, medium, and large enterprises, delivering comprehensive solutions that range from commercial structuring and international pricing to tax planning, processing, logistics, and transportation.
+</p>
+
+<p>
+Our focus is to create competitive operations, reduce risks and costs, and ensure agility and transparency at every stage of the transaction process.
+</p>
+
+<p>
+The accumulated experience of our team allows us to understand the dynamics of the world’s main mineral and metals consumption hubs, facilitating access to international markets and contributing to the financial sustainability and liquidity of our clients’ operations.
+</p>
+
+<p>
+Operating within a global landscape in which resource-rich regions play a critical role in international trade, mining remains a key driver of economic development and growth. EXTRA MILE positions itself as a strategic link within this ecosystem, supporting business expansion in constantly evolving markets.
+</p>
+
+<p>
+With an international presence and an initial focus on gold and diamonds, the company continues to expand its portfolio and opportunities, maintaining a strong commitment to delivering results, strengthening partners’ cash flow, and ensuring secure, efficient, and fully compliant operations aligned with global best practices.
+</p>
+
+            <a href="#contact" class="cta">Contact Our Team</a>
+        </div>
+    </div>
+
+    <!-- IMAGE STACK -->
+ <div class="image-stack">
+
+  <!-- MINERAÇÃO -->
+  <img 
+    src="images/mining-open-pit.jpg"
+    alt="Open pit gold mining operations">
+
+  <!-- ESTRATÉGIA & TRADING -->
+  <img 
+    src="images/corporate-trading-meeting.jpg"
+    alt="International commodity trading strategy meeting">
+
+  <!-- LOGÍSTICA DE MINERAIS -->
+  <img 
+    src="images/ouro-prata-e-diamante-bruto-pedras-e-metais-preciosos-em-mina-de-carvao-conceito-de-meralogia_72932-1638.avif"
+    alt="Global mineral logistics and export operations">
+
+    <!-- ESTRATÉGIA -->
+     <img 
+     src="images/AuVert-Mining-670x520.jpg" 
+     alt="ESTRATÉGIA">
+
+      <!-- MINERAÇÃO -->
+       <img 
+       src="images/mineracao.jpg" 
+       alt="mineração">
+</div>
+
+</section>
+
+<section id="careers" class="careers reveal">
+    <span class="tag">Future & Opportunities</span>
+
+    <div class="lang-pt">
+        <h2>Ambiente de Trabalho</h2>
+        <p>Ambiente internacional, estratégico e focado em excelência operacional.</p>
+    </div>
+
+    <div class="lang-en">
+        <h2>Work Environment</h2>
+        <p>International, strategic and performance-driven environment.</p>
+    </div>
+
+    <div class="careers-grid">
+        <div class="career-card">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80">
+            <div class="career-overlay"><h3>Strategic Trading</h3></div>
+        </div>
+        <div class="career-card">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80">
+            <div class="career-overlay"><h3>Global Logistics</h3></div>
+        </div>
+        <div class="career-card">
+            <img src="images/mineracao-de-minerio-de-ferro-mineracao-de-ouro-diamante-cobre_1178606-25075.avif">
+            <div class="career-overlay"><h3>Mining Operations</h3></div>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="footer-grid">
+        <div>
+            <h4>EXTRA MILE</h4>
+            <p>Gold & Diamond Commodity Trading</p>
+            <p>Phone: <a href="tel:+351929002607" style="color:#b89c5a;text-decoration:none;">
+        +351 929 002 607
+        </a> 
+    </p>
+        </div>
+        <div>
+            <h4>London Office</h4>
+            <p>
+                4TH FLOOR OFFICE 205<br>
+                REGENT STREET<br>
+                LONDON<br>
+                ENGLAND W1B 4HB
+            </p>
+        </div>
+        <div>
+            <h4>Compliance</h4>
+            <p>AML • KYC • International Standards</p>
+        </div>
+    </div>
+    <div class="bottom">© 2026 EXTRA MILE GOLD AND DIAMOND COMMODITY LTD</div>
+</footer>
+
+<script>
+function setLang(lang){
+    document.querySelectorAll('.lang-pt,.lang-en').forEach(e=>e.style.display='none');
+    document.querySelector('.lang-'+lang).style.display='block';
+}
+
+const reveals=document.querySelectorAll('.reveal');
+function revealOnScroll(){
+    reveals.forEach(el=>{
+        if(el.getBoundingClientRect().top < window.innerHeight - 150){
+            el.classList.add('active');
+        }
+    });
+}
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>
